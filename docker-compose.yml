@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  trip:
+    image: ${DOCKER_REGISTRY-}trip
+    build:
+      context: .
+      dockerfile: Trip/Dockerfile
+    ports:
+        - "80:80"
+    container_name: trip_app
